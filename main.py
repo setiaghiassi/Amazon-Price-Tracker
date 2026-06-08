@@ -33,7 +33,6 @@ title_element = soup.find(id="productTitle")
 
 # Anti-bot check
 if price_element and fraction_element and title_element:
-    # 🛠️ FIX: Clean the whole number parts by removing newlines, spaces, and extra dots
     num = price_element.text.replace(".", "").strip()
     fraction = fraction_element.text.strip()
     price = f"{num}.{fraction}"
